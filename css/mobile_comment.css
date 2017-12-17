@@ -1,0 +1,28 @@
+header{
+	background-color: rgb(62,65,71);
+	display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ 无前缀不兼容safari，这个必须*/
+    display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+    display: -ms-flexbox; /* IE 10 */
+    display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */	   
+    color: #fff;
+    height: 30px;
+}
+.backIndex{
+	line-height: 30px;
+	position: absolute;
+}
+header h2{
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	line-height: 30px;
+}
+.index-article-comment{
+	position: static;
+	margin: 0;
+	width: 100%;
+}
+.index-article-preview{
+	width: auto;
+	position: static;
+}

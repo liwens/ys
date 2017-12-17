@@ -1,0 +1,431 @@
+/* 存放所有页面共用的css代码
+ * header样式
+ * */
+html, body, a, h1, h2, h3, h4, h5, h6, div, ul, ol, li, dl, dt, dd, iframe, textarea, input, button, p, strong, b, i, a, span, del, pre, table, tr, th, td, form, fieldset, .pr, .pc{
+	margin: 0;
+	padding: 0;
+	font-family: arial,verdana,Microsoft YaHei,Tahoma,Simsun,sans-serif;
+}
+html,body{
+	height: 100%;
+}
+a{
+	color:#cbcbcb;
+	cursor: pointer;
+}
+a:hover{
+	text-decoration: none;	
+}
+a:visited{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.tips{
+	position: absolute;
+	right: 0;
+	top: 3px;
+	z-index: 100;
+}
+.tips-danger{
+	background-color: rgb(242,222,223);
+	color: rgb(169,63,63);
+}
+.no-padding{
+	padding: 0;
+}
+.show{
+	display: block;
+}
+.custom-hidden{
+	display: none;
+}
+
+/*分割线 大*/
+.dividing-big{
+	height: 10px;
+	background-color: rgb(242,242,242);
+}
+
+.highlight-color{
+	color: rgb(66,185,131) !important;
+	animation: like 1s  alternate;
+	-moz-animation: like 1s  alternate;	/* Firefox */
+	-webkit-animation: like 1s  alternate;	/* Safari 和 Chrome */
+	-o-animation: like 1s  alternate;	/* Opera */	
+}
+@keyframes like{
+	0%{
+		font-size: 25px;
+		color: #999999;
+	}
+	50%{
+		color: rgb(66,185,131);
+		
+	}
+	100%{
+		color: rgb(66,185,131);
+		font-size: inherit;
+	}
+}
+@-webkit-keyframes like{
+	0%{
+		font-size: 25px;
+		/*color: #999999;*/
+	}
+	50%{
+		color: rgb(66,185,131);
+		
+	}
+	100%{
+		color: rgb(66,185,131);
+		font-size: 25px;
+	}
+}
+@-moz-keyframes like{
+	0%{
+		font-size: 25px;
+		color: #999999;
+	}
+	50%{
+		color: rgb(66,185,131);
+		
+	}
+	100%{
+		color: rgb(66,185,131);
+		font-size: 25px;
+	}
+}
+
+.highlight-outline{
+	outline: 2px solid rgb(66,185,131);
+}
+	/*呼吸灯*/
+.breath{
+	width: 30px;
+	height: 4px;
+	display: none;/*隐藏*/
+	position: absolute;
+	margin-left: -4px;
+	margin-top:-2px;
+	background-color: #EEB422;/*黄色*/
+	animation: breath 1s infinite alternate;
+	-moz-animation: breath 1s infinite alternate;	/* Firefox */
+	-webkit-animation: breath 1s infinite alternate;	/* Safari 和 Chrome */
+	-o-animation: breath 1s infinite alternate;	/* Opera */	
+}
+/*呼吸灯动画*/
+@keyframes breath{
+	from{
+		background-color: #EEB422;
+		
+	}
+	to{
+		background-color: #FFFACD;
+		box-shadow:0 0 25px 0px #FFFACD;
+	}
+}
+@-webkit-keyframes breath{
+	from{
+		background-color: #EEB422;
+	}
+	to{
+		background-color: #FFFACD;
+		box-shadow:0 0 25px 0px #FFFACD;
+	}
+}
+@-moz-keyframes breath{
+	from{
+		background-color: #EEB422;
+		box-shadow:0 0 25px 0px #FFFACD;
+	}
+	to{
+		background-color: #FFFACD;
+		box-shadow:0 0 25px 0px #FFFACD;
+	}
+}
+/*头部样式 开始*/
+header{
+	font-family: arial,verdana,Microsoft YaHei,Tahoma,Simsun,sans-serif;	
+}
+.header{
+	padding: 2px;
+	width: 100%;
+	background-color: rgb(62,65,71);
+	position: fixed;
+	z-index: 999;
+}
+
+	/*头部透明的效果 开始 */
+.header-opacity{
+	background-color: rgba(255,255,255,0);
+	box-shadow:0 15px 10px -10px rgba(0,0,0,.22) inset;
+
+}
+.header-opacity .header-login-ed li{
+	border: none;
+}
+.header-opacity li{
+	color: #fff;
+}
+.header-opacity a{
+	color: #fff;
+}
+.header-opacity .toggle-type{
+	color: #fff;
+}
+	/*头部透明的效果 结束*/
+.importantHeaderColor {
+	background-color: rgb(62,65,71) !important;
+}
+
+.nav-fm{
+	color: #fff;
+	cursor: pointer;
+}
+.nav-fm:hover{
+	color:
+}
+.header-nav-xs{
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	border-top:1px solid #333333;
+	display: none;
+}
+.header-nav-xs ul{
+	margin:auto 0;
+	overflow: hidden;
+	display: inline-block;
+	margin:0 auto;
+	float:right;
+}
+.header-nav-xs li{
+	float: left;
+	padding: 14px;
+}
+.logo{
+	font-size: 25px;
+	font-family: arial,verdana,Microsoft YaHei,Tahoma,Simsun,sans-serif;
+	color:#fff;
+	margin-right: 10px;
+}
+.logo img{
+	width: 95px;
+	height:45px;
+	margin:2px 10px;
+}
+.header-nav li,.header-login li{
+	float: left;
+	padding: 16px 10px;
+}
+.header-nav li:hover{
+	border-bottom: 2px solid #fff;
+}
+.header a:hover{
+	color: rgb(92,195,31);
+}
+	/*头部用户信息 开始*/
+.userinfo{
+	position: absolute;
+	width: 300px;
+	height:200px;
+	right: 5px;
+	top: 68px;	
+	border:1px solid #E7E1CD;	
+	border-radius:5px;
+	text-align: center;
+	line-height: 40px;
+	background: url(../img/banner-userinfo.jpg) no-repeat #fff;		
+	font-size: 22px;
+	z-index: 99999;
+	display: none;
+}
+.userinfo-angle{
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: 10px;
+	top: -25px;
+	border-width: 12px;
+	border-style:solid;
+	border-color: transparent transparent #E7E1CD transparent;			
+}
+.userinfo-angle:after{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -11px;
+	top: -9px;
+	border-width: 11px;
+	border-style:solid;
+	border-color: transparent transparent #fff transparent;				
+}
+.userinfo-avatar{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin-top: 50px;
+	border: 1px solid #E7E1CD;
+}
+.userinfo-bottom{
+	height: 30px;
+	width: 100%;
+	background-color: rgb(242,242,242);
+	position: absolute;
+	bottom: 0;
+	border-top: 1px solid #E7E1CD;
+}
+.userinfo-setting{
+	/*border: 1px solid red;*/
+	
+}
+.userinfo-bottom{
+	line-height:30px;
+	font-size: 13px;
+}
+.userinfo-bottom a{
+	cursor: pointer;
+	color: rgb(51,51,51);
+	margin: 0 5px;
+}
+.userinfo-bottom a:hover{
+	text-decoration: none;
+	color: #19A5E0;
+}
+	/*pc端标签*/
+.index-main-nav{
+	/*display: none;*/
+	margin:10px 0;
+}
+.index-main-nav >div{
+
+}
+
+.toggle-type,
+.nav-fm{
+	color: #cbcbcb;
+	cursor: pointer;
+}
+.toggle-type:hover,
+.nav-fm:hover{
+	color: rgb(88,190,41)
+}
+	/*头部用户信息 结束*/
+/*头部样式 结束*/
+
+/*页脚样式 开始*/
+.footer{
+	position: absolute;
+	bottom: 0;
+}
+/*页脚样式 结束*/
+
+/*悬浮层 开始*/
+.tip-suspended-layer{
+	padding: 30px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -40px;
+	box-shadow: 0px 0px 25px 0px #CBCBCB;
+	z-index: 9999;
+	display: none;
+}
+/*悬浮层 结束*/
+/*登陆后 头部导航栏 开始*/
+#headImg{
+	width: 30px;
+	height: 30px;
+}
+.header-user>ul>li{
+	float: left;
+	/*border-left: 1px solid #333333;*/
+	/*padding: 10px;*/
+	width: 50px;
+	height: 50px;
+	border: 1px solid #404040;
+	padding: 10px;
+}
+.icon-jian{
+	font-size: 25px;
+	/*padding-top: -20px !important;*/
+}
+.header-remind{
+	position: absolute;
+	padding: 5px 8px;
+	margin: 26px 0 0 -30px;	
+	border:1px solid #999999;
+	background-color: #fff;
+	z-index: 999;
+}
+.header-remind li{
+	color:#404040;
+	padding: 5px;
+	background-color: rgb(245,245,245);	
+	cursor: pointer;
+}
+.header-remind li:hover{
+	background-color:  rgb(230,230,230)
+}
+.system-reminder-num,
+.interactive-reminder-num{
+	color: #EEB422;
+	font-weight: bold;
+}
+.header-remind a{
+	color:#404040;
+}
+/*三角形外边框*/
+.header-remind:before{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 25px;
+	top: -32px;
+	border-width: 16px;
+	border-style:solid;
+	border-color: transparent transparent #969896 transparent;
+}
+/*三角形白色背景*/
+.header-remind:after{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 26px;
+	top: -29px;
+	border-width: 15px;
+	border-style:solid;
+	border-color: transparent transparent #fff transparent;	
+}
+.custom-navbar-toggle{
+	background-color: transparent;
+	border:1px solid red
+}
+
+	/*响应式菜单按钮 开始*/
+.menu-bt{
+	width: 50px;
+	height: 55px;
+	overflow: hidden;	
+	line-height: 30px;
+}
+.menu-bt .iconfont{
+	font-size: 30px;
+	color: #fff;
+}
+.menu-bt-checked{
+	color: rgb(0,198,118) !important;
+}
+	/*响应式菜单按钮 结束*/
+/*登陆后头部导航栏 结束*/
+
+
+.textShadow{
+	/*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de;*/
+	 text-shadow: 0 0 20px #AAAAAA;
+}

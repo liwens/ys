@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>嘤其鸣矣.求其友声-友声网</title>
+		<meta name="referrer" content="no-referrer">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!--iconfont字体-->
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+		
+		<!--自定义滚动条-->
+		<link rel="stylesheet" href="plug/scrollbar/css/perfect-scrollbar.css" />
+		<!--友声fm-->
+		
+		<!--pc端文本编辑器-->
+		<link rel="stylesheet" type="text/css" href="css/wangEditor.css">
+		<link rel="stylesheet" href="css/base.css" />		
+		<link rel="stylesheet" href="css/master.css" />
+		<!--响应式-->
+		<link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+		<link rel="stylesheet" href="plug/editor-mobile/wangEditor-mobile.css" />
+		<!--下拉刷新-->
+		<link rel="stylesheet" href="plug/dropload/dropload.css" />
+		<link rel="stylesheet" href="css/fm.css"/>
+		<link rel="stylesheet" type="text/css" href="plug/carousel/licarousel.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"/>	
+		<link rel="stylesheet" href="css/fm.css" />
+		<style type="text/css">	
+			body{
+				background-color: aliceblue;
+			}
+			html,body{
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header header-opacity">
+			<div class="logo pull-left"><img src="img/newlogo.png" alt="友声网" /></div>
+			<ul class="header-nav pull-left hidden-xs">
+				<li><a href="index.html" class="textShadow">首页</a></li>
+				<li><a href="setting.html" class="textShadow">设置</a></li>
+				<li class="toggle-type textShadow">类型</li>
+				<li class="nav-fm textShadow">
+					友声随心听		
+				</li>
+				<li class="btn textShadow" data-toggle="modal" data-target="#publish"><a href="javascript:;" >发布</a></li>
+			</ul>
+			<div class="header-user pull-right">
+				<!--未登录时的-->
+				<div class="header-login pull-right">
+					<ul>
+						<li class="menu-bt visible-xs js-menu-xs-bt"> <i class="iconfont icon-iconfont-edu12"></i></li>
+						<li><a href="login.html">登录</a></li>
+						<li><a href="register.html">注册</a></li>
+					</ul>
+				</div>
+				
+				<!--登陆后的 用户信息栏 开始 -->
+				<ul class="header-login-ed hidden">
+					<li class="menu-bt visible-xs js-menu-xs-bt"> <i class="iconfont icon-iconfont-edu12"></i></li>
+					<li>
+						<a href="javascript:;" id="js-header-remind-a">
+							<i class="iconfont icon-jian"></i>							
+							<i class="breath show"></i>
+						</a>
+						<ul id="js-header-remind" class="header-remind" style="display: none;">
+							<li class="system-reminder"><a href="message.html">系统提醒<em class="system-reminder-num"></em></a></li>
+							<li class="interactive-reminder"><a href="message.html">互动提醒<em class="interactive-reminder-num"></a></em></li>
+						</ul>
+					</li>
+					<li class="js-header-avatar">
+						<a href="javascript:;"><img src="" id="headImg" alt="" /></a>
+						<!--用户信息下拉栏 开始-->
+						<div class="userinfo">
+							<div class="userinfo-angle"></div>
+							<img src="" alt="" class="userinfo-avatar"/>
+							<div class="userinfo-name">用户名</div>
+							<div class="userinfo-bottom">
+								<a class="userinfo-setting pull-left" href="setting.html"><i class="iconfont icon-3"></i>账号设置</a>
+								<a class="userinfo-exit pull-right" href="javascript:;"><i class="iconfont icon-tuichu"></i>退出</a>
+							</div>
+						</div>
+						<!--用户信息下拉栏 结束-->		
+					</li>
+				</ul>
+				<!--登陆后的 用户信息栏 结束 -->
+			</div>
+				
+			<div class="custom-hidden header-nav-xs js-menu-xs">
+				<ul class="">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="setting.html">设置</a></li>		
+				<li class="nav-fm">
+					<a href="javascript:;">友声FM</a>
+				</li>
+				<li class="btn"><a href="editor-mobile.html" >发布</a></li>
+				</ul>		
+					<div class="visible-xs">
+						<div class="btn-group btn-group-justified" role="group" aria-label="...">
+							<div class="btn-group" role="group">
+							    <button class="btn btn-info active">通览</button>
+							</div>
+							<div class="btn-group" role="group">
+							    <button class="btn btn-info">心声</button>
+							</div>
+							<div class="btn-group" role="group">
+							    <button class="btn btn-info">觅友</button>
+							</div>						
+						</div>
+						<div class="btn-group btn-group-justified" role="group" aria-label="...">
+							<div class="btn-group" role="group">
+							    <button class="btn btn-info">解惑</button>
+							</div>
+							<div class="btn-group" role="group">
+							    <button class="btn btn-info">寻物</button>
+							</div>
+							<div class="btn-group" role="group">
+							    <button class="btn btn-info">易物</button>
+							</div>					
+						</div>						
+					</div>
+			</div>
+		</div>	
+		<!--首页轮播 开始 由我自己写的轮播插件动态写入-->
+		<div class="indexBanner"></div>
+		<!--首页轮播 结束-->
+		<div class="index-wrap">
+			<div class="index-main">
+				<div class="index-main-nav">
+					<!--pc端 标签组 开始 -->
+					<div class="btn-group btn-group-justified hidden-xs" role="group" aria-label="...">
+						<div class="btn-group tab-all tabs" role="group" data-type='all'>
+							通览
+						</div>
+						<div class="btn-group tab-ordinary tabs" role="group" data-type='t1'>
+							心声
+						</div>
+						<div class="btn-group tab-activity tabs" role="group" data-type='t2'>
+							觅友
+						</div>
+						<div class="btn-group tab-problem tabs" role="group" data-type='t3'>
+							解惑
+						</div>
+						<div class="btn-group tab-loss tabs" role="group" data-type='t4'>
+							寻物
+						</div>
+						<div class="btn-group tab-change tabs" role="group" data-type='t5'>
+							易物
+						</div>						
+					</div>						
+					<!--pc端 标签组 结束 -->
+				</div>
+				
+				<div class="index-article-container">
+					<!--信息预览-->
+					
+					<div class="index-article-preview">
+						<!--由js加载内容-->
+						<div class="lists"></div>
+					</div>
+					<!--信息内容-->
+					<div class="index-article-comment">
+						<h3></h3>
+					    <form class="bs-example bs-example-form comment-form" role="form">
+			                <div class="input-group">
+			                    <input type="text" class="form-control" id="comment-input" maxlength= "140" placeholder="请选择帖子回复" disabled>
+			                    <span class="input-group-btn">
+			                        <button class="btn btn-default js-send-comment-bt" type="button">发送</button>
+			                    </span>
+			                </div><!-- /input-group -->
+					    </form>
+					    
+					    <hr class="dividing-big"/>
+					    <canvas id="commentCanvas"></canvas>
+					    <!--评论展示区-->
+					    <div class="index-article-comment-area">
+					    	
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--发帖模态框 开始-->
+		<div class="modal fade" id="publish" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog " id="editor-pc">
+		        <div class="modal-content publish-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		                <h4 class="modal-title" id="myModalLabel">发布</h4>
+		                
+		            </div>
+		            <div class="publish-title">
+						<div class="input-group">							
+							<span>类型</span>
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									<span id="publish-title-type" data-titleType = "t1">碎碎念 </span>
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu publish-title-dropdown-menu">
+									<li><a href="javascript:;" data-titleType = "t1">碎碎念</a></li>
+									<li><a href="javascript:;" data-titleType = "t2">交友活动</a></li>
+									<li><a href="javascript:;" data-titleType = "t3">疑惑解答</a></li>
+									<li><a href="javascript:;" data-titleType = "t4">失物招领</a></li>
+									<li><a href="javascript:;" data-titleType = "t5">二手交易</a></li>
+								</ul>
+							
+							
+							<!--<input type="text" class="form-control" placeholder="请输入标题">-->
+						</div><!-- /input-group -->
+		           </div>
+		            <div class="modal-body" id="editorBody"></div>
+		            <div class="modal-footer">
+		            	<a class="pull-left site-container">
+		            		<div class="site-dinwei-wrap">
+			            		<i class="iconfont icon-dingwei"></i>
+			            		<span class="site" >正在定位....</span>   
+			            		<input type='text' class="site-change-input js-site-change-input"/>
+		            		</div>
+		            		<div class="map-container">
+		            			<div id="mapshow"></div>
+		            		</div>            		
+		            	</a>
+		         		<span class="iconfont icon-xiugai pull-left" id="js-site-change-bt" data-flag="0"></span>
+		                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		                <button type="button" class="btn btn-primary public-submit">提交</button>
+		            </div>
+		        </div><!-- /.modal-content -->
+		    </div><!-- /.modal -->
+		</div>	
+		<!--发帖模态框 结束-->
+		
+		<!--提示悬浮层 开始-->
+		<div class="tip-suspended-layer-wrap">
+			<div class="alert alert-dismissable tip-suspended-layer">
+				<span class="tip-suspended-text"></span>
+			</div>			
+		</div>
+		<!--提示悬浮层 结束-->
+		
+		<!--pc端文章地图容器 开始-->
+		<div class="article-map-container" data-created="false">
+			<div class="map-up-angle"></div>
+			<div class="map-down-angle"></div>
+			<div id="article-map-show">
+				即将展示
+			</div>
+		</div>
+		<!--pc端文章地图容器 结束-->
+	<!--友声FM 开始-->
+    <div id="fm">
+        <div class="fm-header">
+            <div class="logo"></div>
+        </div>
+        <div class="fm-main clear">
+            <div class="fm-body">
+                <div class="player-box clear">
+                    <div class="song">
+                        <div class="song-img">
+                        	<img src="" alt="">
+                        </div>
+                        
+                        <div class="song-info">
+	                        <p class="song-name">歌名加载中...</p>
+	                        <p class="song-author">歌手加载中</p>                       	
+                        </div>
+
+                        <ul class="control clear">
+                        	<!--播放-->
+                            <li class="item item-play">
+                                <a class="play play-yes" href="javascript:;"><i class="iconfont icon-119"></i></a>
+                                <a class="play play-no" href="javascript:;"><i class="iconfont icon-bigbofang"></i></a>
+
+                            </li>
+                            <!--下一首-->
+                            <li class="item item-next">
+                                <a href="javascript:;"><i class="iconfont icon-xiayishou"></i></a>
+                            </li>
+                            <!--换台返回-->
+                            <li class="item">
+                            	<a class="btn-change" href="javascript:;"><i class="iconfont icon-crm38"></i></a>
+                            	<a class="btn-back" href="javascript:;"><i class="iconfont icon-crm39"></i></a>
+                            </li>
+                        </ul>
+                        <div class="song-progress">
+                            <progress class="progress-time"></progress>
+                        </div>
+                    </div>
+                    <div class="lrc">
+                        <div class="lrc-main"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="fm-channel">
+            	 <h6 class="channel-title" data-channels="public_shiguang_jingdianlaoge">
+                	当前频道：<span>经典老歌</span>
+               </h6>
+                <div class="fm-channels clear">
+                    <dl class="dl-0">
+                        <dt>午后休闲</dt>
+                    </dl>
+                    <dl class="dl-1">
+                        <dt>恰意时光</dt>
+                    </dl>
+                    <dl class="dl-2">
+                        <dt>下雨天</dt>
+                    </dl>
+                    <dl class="dl-3">
+                        <dt>回忆往事</dt>
+                    </dl>
+                    <dl class="dl-4">
+                        <dt>偶像歌曲</dt>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <audio id="player" autoplay="autoplay">no support player</audio>
+    </div>
+<!--友声FM 结束-->   
+
+	
+		<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=hCBcm8H8opRLdC0f6OibbGavC0pne1uc"></script>
+		<!--<script src="plug/scrollbar/js/perfect-scrollbar.jquery.min.js"></script>-->
+		<!--<script src="plug/scrollbar/js/perfect-scrollbar.js"></script>-->
+		<!--下拉刷新框架-->
+		<script src="plug/dropload/dropload.js" type="text/javascript" charset="utf-8"></script>
+		<script src="plug/carousel/licarousel.js"></script>
+		<!--<script type="text/javascript" src="js/fm.js"></script>-->
+		<script src="js/master.js"></script>
+		<script src="js/index_configure.js"></script>	
+	</body>
+</html>

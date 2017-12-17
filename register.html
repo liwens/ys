@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>友声-注册</title>
+		<link href="img/ico.png" type="image/x-icon" rel="shortcut icon" />
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+		<link rel="stylesheet" href="css/base.css" />		
+		<link rel="stylesheet" href="css/master.css" />
+		<link rel="stylesheet" href="css/master.css" />
+		<link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"/>	
+	</head>
+	<body>
+		<div class="header importantHeaderColor">
+			<div class="logo pull-left"><img src="img/newlogo.png" alt="友声" /></div>
+			<ul class="header-nav pull-left hidden-xs">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="setting.html">设置</a></li>
+			</ul>
+			<div class="header-login pull-right">
+				<ul>
+					<li class="menu-bt visible-xs js-menu-xs-bt"> <i class="iconfont icon-iconfont-edu12"></i></li>				
+					<li><a href="login.html">登录</a></li>
+					<li><a href="register.html">注册</a></li>
+				</ul>
+			</div>
+			<div class="header-nav-xs js-menu-xs custom-hidden">
+				<ul class="">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="setting.html">设置</a></li>
+				</ul>				
+			</div>
+
+		</div>
+		<div class="register-banner"></div>
+		<div class="register-main">
+			<div class="clearfix main-join">
+				<h2 class="text-primary pull-left clearfix">加入我们</h2>
+				<small class="pull-right">已有账号？ <a href="login.html">立即登录</a></small>				
+			</div>
+
+			<form autocomplete="off">
+				<div class="form-group">
+					<div class="input-group">
+			            <span class="input-group-addon"><i class="iconfont icon-ux13996221517411354"></i>我的账号</span>
+			            <input type="text" id="js-register-account" class="form-control" placeholder="成功注册后不可修改">
+			        </div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+			            <span class="input-group-addon"><i class="iconfont icon-suo"></i>登录密码</span>
+			            <input type="password" class="form-control" id="js-register-password" placeholder="6-20个字母，数字和特殊字符">
+			            <!--<span class="input-group-addon tips-danger js-password-tips" >为了账号安全，长度应在6-20位间</span>-->
+			        </div>					
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+			            <span class="input-group-addon"><i class="iconfont icon-suo"></i>确认密码</span>
+			            <input type="password" class="form-control" id="js-password-check" placeholder="再次输入上面的密码">
+			            
+			        </div>					
+				</div>		
+				<div class="form-group">
+					<div class="input-group">
+			            <span class="input-group-addon"><i class="iconfont icon-youjian"></i>电子邮件</span>
+			            <input type="text" class="form-control" id="js-register-email" placeholder="用户找回密码以及通知">
+			        </div>					
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+			            <span class="input-group-addon"><i class="iconfont icon-xingbie"></i>选择性别</span>
+			            <label class="li-checkbox pull-left ragister-sex">
+			            	<input type="radio" name="sex" value="1" checked>
+			            	<i class="input-helper"></i>
+			            	男
+			            </label>
+			            <label class="li-checkbox pull-left ragister-sex">
+			            	<input type="radio" name="sex" value="0">
+			            	<i class="input-helper"></i>
+			            	女
+			            </label>			           
+			        </div>					
+				</div>					
+				<div class="form-group">
+					<div class="input-group">
+			            <span class="input-group-addon"><i class="iconfont icon-zaixiankefuyanzheng"></i>验证码 </span>
+			            <input type="text" class="form-control captcha-input" id="js-captcha" placeholder="输入验证码">
+			            <!--<span class="input-group-addon tips-danger js-account-tips" ></span>-->
+			           	<span class="input-group-addon no-padding"><img src="php/captcha.php" alt="失败请点击刷新" id="js-captcha-img" title="看不清，换一张"/></span>
+			        </div>					
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<label class="li-checkbox">
+							<input type="checkbox" name="Argeement" id="register-agree" checked/>
+					        <i class="input-helper"></i>
+	        				我已阅读并接受<a href="#">《注册协议》</a>和<a href="#">《隐私保护》</a>
+						</label>
+					</div>
+				</div>
+				<input type="button" class="btn btn-primary btn-lg " name="register-submit" id="register-submit" value="确认注册" />
+			</form>
+		</div>
+		<!--<div class="footer">
+			@广东农工商职业技术学院 李进文 黄淑娟
+		</div>-->
+		<div class="tip-suspended-layer-wrap">
+			<div class="alert alert-dismissable tip-suspended-layer">
+				<span class="tip-suspended-text"></span>
+			</div>			
+		</div>
+
+		<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>		
+		<script src="js/master.js"></script>	
+		<script src="js/register.js"></script>
+		<!--<script src="js/master.js"></script>-->		
+	</body>
+</html>

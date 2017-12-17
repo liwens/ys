@@ -1,0 +1,71 @@
+/*轮播插件licaousel的css代码*/
+body,html{
+	height: 100%;
+}
+.li-carousel-container{
+	width: 100%;
+	height: 100%;
+	height: inherit;
+	position: relative;
+	list-style: none;
+}
+.li-carousel-container>li>a{
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: 50%;
+}
+.li-carousel-container>li{
+	height: 100%;
+	/*display: none;*/
+	float: left;
+	transition: all .8s ease;
+	-webkit-transition: all .8s ease;
+}
+.li-active-img{
+	display: block !important;
+}
+.li-active-bt{
+	background-color: rgb(66,185,131) !important;
+}
+/*.li-active-bt:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	margin: -2px;
+	border-radius: 50%;
+}*/
+.li-control-bt{
+	position:absolute;
+	border-radius: 9999px;
+	padding: -10px;
+	background-color: rgba(255,255,255,.2);
+}
+.li-control-bt li{
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+	border-radius:50%;
+	margin: 10px;
+	list-style: none;
+	cursor: pointer;
+}
+.li-control-position-left{					
+	top: 40%;
+	left: 2%;
+}
+.li-control-position-right{
+	top: 40%;
+	right: 2%;
+}
+.li-control-position-middle{
+	top: 90%;
+	left: 50%;
+}
+.li-control-position-middle li{
+	float: left;
+}

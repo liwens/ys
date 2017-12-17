@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>友声-我的帖子</title>
+		<link href="img/ico.png" type="image/x-icon" rel="shortcut icon" />	
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+		<link rel="stylesheet" href="css/base.css" />		
+		<link rel="stylesheet" href="css/master.css" />
+		<link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"/>	
+	</head>
+	<body>
+		<div class="header importantHeaderColor">
+			<div class="logo pull-left"><img src="img/newlogo.png" alt="友声" /></div>
+			<ul class="header-nav pull-left hidden-xs">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="setting.html">设置</a></li>
+			</ul>
+			<div class="header-user pull-right">
+				<ul>
+					<li class="menu-bt visible-xs js-menu-xs-bt">
+						<i class="iconfont icon-iconfont-edu12"></i>
+					</li>
+					<li>
+						<a href="javascript:;" id="js-header-remind-a">
+							<i class="iconfont icon-jian"></i>
+							<!--提示呼吸灯-->
+							<i class="breath"></i>
+						</a>
+						<ul id="js-header-remind" class="header-remind" style="display: none;">
+							<li class="system-reminder"><a href="message.html">系统提醒<em class="system-reminder-num"></em></a></li>
+							<li class="interactive-reminder"><a href="message.html">互动提醒<em class="interactive-reminder-num"></a></em></li>
+						</ul>
+					</li>
+					<li class="js-header-avatar">
+						<a href="javascript:;"><img src="" id="headImg" alt="" /></a>
+						<!--用户信息下拉栏 开始-->
+						<div class="userinfo">
+							<div class="userinfo-angle"></div>
+							<img src="" alt="" class="userinfo-avatar"/>
+							<div class="userinfo-name">用户名</div>
+							<div class="userinfo-bottom">
+								<a class="userinfo-setting pull-left" href="setting.html"><i class="iconfont icon-3"></i>账号设置</a>
+								<a class="userinfo-exit pull-right" href="javascript:;"><i class="iconfont icon-tuichu"></i>退出</a>
+							</div>
+						</div>
+						<!--用户信息下拉栏 结束-->						
+					</li>
+				</ul>
+			</div>
+			<!--移动端 导航栏  开始-->
+			<div class="custom-hidden header-nav-xs js-menu-xs">
+				<ul class="">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="setting.html">设置</a>
+					</li>
+					<li>
+						<a href="setting-arcitle.html">心声</a>
+					</li>
+					<li>
+						<a href="message.html">信息</a>
+					</li>					
+				</ul>		
+			</div>
+			<!--移动端 导航栏  结束-->
+		</div>
+		<!--个人设置主题部分 开始-->
+		<div class="setting-main">
+			<!--侧导航栏 开始-->
+			<div class="setting-slide-nav hidden-xs">
+				<div class="setting-head-img">
+					<img src="" alt=""/>
+				</div>
+				<ul class="slide-menu">
+					<li><a href="setting-arcitle.html"><i class="iconfont icon-icon"></i>心声</a></li>
+					<li  class="slide-menu-active"><a href="#"><i class="iconfont icon-jian"></i>消息</a></li>
+					<li><a href="setting.html" id="js-setting"><i class="iconfont icon-3"></i>设置</a></li>
+				</ul>
+			</div>
+			<!--侧导航栏 结束-->
+			<div class="setting-content">
+				<div class="page-header hc">
+					<h3>消息提醒</h3>
+				</div>
+				<ul class="nav nav-tabs">
+					<li class="active">
+						<a href="#interactive-reminder" data-toggle="pill">互动提醒</a>
+					</li>				
+					
+					<li>
+						<a href="#system-reminder" data-toggle="pill">系统提醒</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="interactive-reminder">
+						<div class="msg-box">
+							<div class="msg-list">
+								<img src="img/touxiang.jpg" alt="" class="msg-avatar"/>
+								<span class="message-time">2017-03-04 10:54:47</span>																	
+								<div class="message-content">wwww 评论了你在2017-03-03 10:54:47 发布的心声</div>							
+							</div>
+							<div class="msg-list">
+								<img src="img/touxiang.jpg" alt="" class="msg-avatar"/>
+								<span class="message-time">2017-03-04 10:54:47</span>																	
+								<div class="message-content">维C 点赞了你在2017-03-03 10:54:47 发布的心声</div>							
+							</div>						
+						</div>
+					</div>								
+					<div class="tab-pane fade"  id="system-reminder">
+						<div class="system-msg-box">
+							<div class="msg-list">
+								<img src="img/yousheng.jpg" alt="" class="msg-avatar"/>
+								<span class="message-time">2017-03-04 10:54:47</span>																	
+								<div class="message-content js-message-content"></div>							
+							</div>
+							<div class="msg-list">
+								<img src="img/yousheng.jpg" alt="" class="msg-avatar"/>
+								<span class="message-time">2017-03-04 10:54:47</span>																	
+								<div class="message-content"></div>							
+							</div>							
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+		
+		
+		
+		<!--提示悬浮层  开始 -->
+		<div class="tip-suspended-layer-wrap">
+			<div class="alert alert-dismissable tip-suspended-layer">
+				<span class="tip-suspended-text"></span>
+			</div>			
+		</div>
+		<!--提示悬浮层  结束-->
+		<!--上传头像模态框 结束-->
+		<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+		<script src="js/master.js"></script>
+		<script type="text/javascript" src="js/messagePage.js"></script>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+{
+    "lists":[
+        {
+            "controlType":"0",   //操作类型，0位评论，1为点赞
+            "avatarUrl":"", //操作用户的头像路径,
+            "controlTime":"",  //操作的时间，如什么时候点赞/评论的
+            "userName":"我不是李文", //操作用户名字
+            "articlePublishTime":"2017-04-16 15:08:16",  //文章发布的时间 
+            "readed":"1"  //是否已读，1是未读，0是已读
+        },
+        {
+            "controlType":"0",
+            "avatarUrl":"http://tva2.sinaimg.cn/crop.142.24.400.400.180/006iWwIFjw8f31xbsh3v0j30k00ci3yy.jpg",
+            "controlTime":"2017-04-16 15:08:16",
+            "userName":"我不是李文",
+            "articlePublishTime":"2017-04-16 15:08:16",
+            "readed":"1"
+        },
+        {
+            "controlType":"1",
+            "avatarUrl":"http://tva2.sinaimg.cn/crop.142.24.400.400.180/006iWwIFjw8f31xbsh3v0j30k00ci3yy.jpg",
+            "controlTime":"2017-04-16 15:08:16",
+            "userName":"我不是李文",
+            "articlePublishTime":"2017-04-16 15:08:16",
+            "readed":"1"
+        },
+        {
+            "controlType":"0",
+            "avatarUrl":"http://tva2.sinaimg.cn/crop.142.24.400.400.180/006iWwIFjw8f31xbsh3v0j30k00ci3yy.jpg",
+            "controlTime":"2017-04-16 15:08:16",
+            "userName":"我不是李文",
+            "articlePublishTime":"2017-04-16 15:08:16",
+            "readed":"1"
+        },
+        {
+            "controlType":"1",
+            "avatarUrl":"http://tva2.sinaimg.cn/crop.142.24.400.400.180/006iWwIFjw8f31xbsh3v0j30k00ci3yy.jpg",
+            "controlTime":"2017-04-16 15:08:16",
+            "userName":"我不是李文",
+            "articlePublishTime":"2017-04-16 15:08:16",
+            "readed":"0"
+        },
+        {
+            "controlType":"0",
+            "avatarUrl":"http://tva2.sinaimg.cn/crop.142.24.400.400.180/006iWwIFjw8f31xbsh3v0j30k00ci3yy.jpg",
+            "controlTime":"2017-04-16 15:08:16",
+            "userName":"我不是李文",
+            "articlePublishTime":"2017-04-16 15:08:16",
+            "readed":"0"
+        }
+    ]
+}

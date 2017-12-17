@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style type="text/css">
+		#fa,#fa2,#fa3{
+			width: 200px;
+			height: 200px;
+			background-color: aqua;
+			border: 1px solid royalblue;
+		}
+		#son{
+			width: 100px;
+			height: 100px;
+			background-color: firebrick;
+		}
+		/*子元素*/
+		#fa:hover #son{
+			background-color: red;
+		}
+		/*相邻元素*/
+		/*#fa:hover  div{
+			background-color: red;
+		}*/
+		#fa:hover div div{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+<div class="article-term" data-username=data.lists[i].username> 
+		                        		<div class="article-preview-top"> 
+		                        		<img src="  data.lists[i].avatarUrl  " alt="" class="article-header-img"/> 
+										<span class="article-preview-username">data.lists[i].username</span> 
+										<span class="article-preview-time">getDateDiff(data.lists[i].time)</span> 
+									</div>							
+									<div class="article-preview-content">  data.lists[i].content  </div> 
+									<hr /> 
+									<div class="article-preview-bottom">  
+										<div class="article-bottom-container"> 
+											<a href="javascript:;" class="dingwei js-dingwei" data-latlng=" data.lists[i].site_latlng"><i class="iconfont icon-dingwei"></i>data.lists[i].site</a> 						
+											<div class="interaction">  
+												<div class="article-delete" title="删除文章" data-aid= "data.lists[i].aid"> 
+													<i class="iconfont icon-x1"> </i> 													
+												</div> 
+												<div class="article-preview-comment" data-aid="  data.lists[i].aid  "> 
+													<i class="iconfont icon-pinglun1"></i> 
+													<span class="article-preview-comment-num">data.lists[i].comment</span> 
+												</div> 
+												<div class="article-preview-dianzan" data-checked="no"> 	
+													<i class="iconfont icon-dianzan-copy"></i> 
+													<span class="article-preview-dianzan-num">data.lists[i].zan</span> 
+												</div> 									
+											</div> 
+										</div>	 
+									</div> 					
+								</div>;
+</body>
+</html>

@@ -1,0 +1,211 @@
+li{
+	list-style: none;
+}
+#fm{
+	height: 58px !important;
+	position: fixed;
+	border: 1px solid #B9BABE;
+   	box-shadow:0 0 25px 0px rgba=(0,0,0,0.22) inset;
+   	-webkit-box-shadow: 0 0 25px 0px rgba(0,0,0,0.22) inset;
+   	background-color: rgb(255,255,255);
+   	left: -265px;
+   	top: 100px;
+}
+
+.lrc{
+	display: none;
+}
+.song-img img{
+	/*height: 100%;*/
+	width: 100%;
+	float: left;
+}
+.song-img{
+	width: 54px;
+	height: 54px;
+	float: left;
+	display: inline-block;
+	background-color: rgb(223,59,59);
+   	box-shadow:0 0 25px 0px rgba(0,0,0,0.22) inset;
+   	-webkit-box-shadow: 0 0 25px 0px rgba(0,0,0,0.22) inset;
+   	background-color: rgba(255,255,255,.1);
+}
+.song-info{
+	float: left;
+	/*width: 180px;*/
+	margin-left:5px ;
+}
+.song-info p{
+	height: 25px;
+	margin: 0;
+	padding: 0;
+	line-height: 29px;
+}
+.song-name{
+	
+}
+.song-author{
+	color: #737373;
+	font-size: 14px;
+}
+.channel-title{
+	/*display: none;*/
+	box-shadow:15px 0 10px -10px rgba(0,0,0,.22) inset;
+}
+.song{
+	width: 100%;
+	height: 100%;
+	display: table-cell;
+	position: relative;
+	padding: 0;
+}
+.control{
+	margin-top: 15px;
+	float: left;
+}
+.song-progress{
+	position: absolute;
+	bottom: -6px;
+	left: 0;
+	border: 1px solid rgb(228,228,228) ;
+	width: 100%;
+	height: 4px;
+	cursor: pointer;
+}
+progress{
+	position: absolute;
+	height: 4px !important;
+	background-color: rgb(228,228,228);
+}
+progress:after{
+	width: 5px;
+	height: 5px;
+	border:1px solid #CCCCCC;
+	display: block;
+	content: "";
+	position: absolute;
+	right: 0;
+	background-color: #FF4040;
+	border-radius:50% ;
+	top: 0px;
+	animation: progressPoint 2s 0s ease-out infinite;
+	-webkit-animation:progressPoint 2s 0s ease-out infinite;
+}
+	/*播放器进度条动画 */
+@-moz-keyframes progressPoint{
+    0% {
+        box-shadow: 0 0 4px 3px rgba(250, 250, 205, 0), 0 0 0px 0px  #FFFFE0, 0 0 0px 0px rgba(250, 250, 205, 0);
+    }
+    100% {
+        box-shadow: 0 0 4px 3px #FFD39B, 0 0 6px 5px #FFFFE0, 0 0 4px 4px #FFD39B;
+    }
+}
+@-webkit-keyframes progressPoint{
+    0% {
+        box-shadow: 0 0 4px 3px rgba(250, 250, 205, 0), 0 0 0px 0px  #FFFFE0, 0 0 0px 0px rgba(250, 250, 205, 0);
+    }
+    100% {
+        box-shadow: 0 0 4px 3px #FFD39B, 0 0 6px 5px #FFFFE0, 0 0 4px 4px #FFD39B;
+    }
+}
+@keyframes progressPoint{
+    0% {
+        box-shadow: 0 0 4px 3px rgba(250, 250, 205, 0), 0 0 0px 0px  #FFFFE0, 0 0 0px 0px rgba(250, 250, 205, 0);
+    }
+    100% {
+        box-shadow: 0 0 4px 3px #FFD39B, 0 0 6px 5px #FFFFE0, 0 0 4px 4px #FFD39B;
+    }
+}/*播放器进度条动画 结束*/
+
+/*控制按钮*/
+.control{
+	/*float: left;*/
+	padding: 0;
+	/*width: 70px;*/
+	margin-left: 20px;
+	margin-right: 10px;
+	
+}
+.control li{
+	/*float: left;*/
+	display: inline-block;
+}
+.control .iconfont{
+	font-size: 18px;
+}
+.control a:hover{
+	color: #FF4040;
+}
+.control a{
+	/*color:#8E8E8E;*/
+	color: rgb(223,59,59);
+	text-decoration: none;
+}
+.btn-back{
+	display: none;
+}
+.play-no{
+	display: none;
+}
+/*歌曲下拉栏 开始*/
+.fm-channel{	
+	width: 100%;
+	position: absolute;
+	border: 1px solid #B9BABE;
+	/*display: none;*/
+	border-radius: 0 0 3px 3px ;
+	margin:10px 0 0 -0px;
+	
+}
+.fm-channels{
+	background-color: #fff;
+}
+.fm-channels dt{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	background-color: rgb(239,239,239);
+	line-height: 40px;
+	border-bottom: 1px solid #F8F8F8;
+	box-shadow:15px 0 10px -10px rgba(0,0,0,.22) inset;
+	cursor: pointer;
+	font-size: 14px;
+	color:rgb(96, 189, 232);
+	overflow: hidden;
+	
+}
+.fm-channels dt:hover{
+	 box-shadow:0 0 25px 0px rgba(0,0,0,0.22);
+}
+.fm-channels dd{
+	width: 33%;
+	height: 30px;
+	text-align: center;
+	display: none;
+	line-height: 30px;
+	cursor: pointer;
+	color:#838383;
+	float: left;
+	background-color: #fff;
+}
+.fm-channel dd:hover{
+	 box-shadow:0 -15px 10px -10px rgba(0,0,0,.22) inset;
+}
+.fm-channels dl,
+.fm-channels dd,
+.fm-channels dt,
+.fm-channel h6{
+	margin: 0;
+	padding: 0;
+}
+.fm-channel h6{
+	text-align: center;
+	height: 40px;	
+	line-height: 40px;
+	box-shadow:0 15px 10px -10px rgba(0,0,0,.22) inset;
+	background-color: #fff;
+	
+}
+
+/*歌曲下拉栏结束*/
+

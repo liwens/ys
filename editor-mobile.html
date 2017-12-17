@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="img/ico.png" type="image/x-icon" rel="shortcut icon" />
+		<title>友声</title>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="plug/editor-mobile/wangEditor-mobile.css" />
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css">	
+		<link rel="stylesheet" href="css/master.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"/>	
+		<style type="text/css">
+			html,body{
+				background-color: rgb(242,242,242);
+				padding: 0;
+				margin: 0;
+			}
+			a{
+				text-decoration: none;
+			}
+			.map-container{
+				width: 100%;
+				height: calc(100% - 240px);
+				height: -webkit-calc(100% - 240px - 30px);
+				position: absolute;
+				bottom: 70px;
+				z-index: 9999;
+				bottom: 0;
+			}
+		</style>
+	</head>
+	<body>
+	   <div class="eidtor-mobile-header">
+	   		<span><a href="index.html"><i class="iconfont icon-x"></i></a></span>
+	   		<i class="eidtor-mobile-header-fabu">发布</i	>
+	   		<span><a href="JavaScript:;" class="public-submit"> <i class="iconfont icon-duigou"></i></a></span>
+	   </div>
+	
+	    <div class="editor-mobile-container">
+	        <textarea id="editor-mobile-area" style="width:100%;height:100%;" placeholder="请输入内容">
+	            
+	        </textarea>
+	    </div>
+	    <div class="editor-mobile-bottom">
+	    	    <a class="pull-left site-container">
+            		<i class="iconfont icon-dingwei"></i>
+            		<span class="site">正在定位</span>
+            		<input type='text' class="site-change-input js-site-change-input"/>
+            		<span class="iconfont icon-xiugai pull-right" id="js-site-change-bt" data-flag="0"></span>
+            		<div class="map-container">
+            			<div id="mapshow"></div>           			
+            		</div>           		
+           	    </a>         	
+	    	<div class="public-submit editor-mobile-send inputed">SEND</div>
+	    </div>
+   	
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.js"></script>
+		<script src="plug/editor-mobile/zepto.js"></script>
+		<script src="plug/editor-mobile/zepto.touch.js"></script>
+		<script src="plug/editor-mobile/wangEditor.mobile.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=hCBcm8H8opRLdC0f6OibbGavC0pne1uc"></script>
+		<script src="js/master.js"></script>
+		<script src="js/eidtor-mobile.js"></script>
+    
+	</body>
+</html>

@@ -1,0 +1,121 @@
+/*页面响应式的代码
+ *注册页
+ */
+
+@media only screen and (max-width: 1220px) {
+	.index-main{
+		width: 100%;
+	}
+	.publish-content{
+		width: 100% !important;
+		margin:0 20px;
+	}
+	/*评论区域的宽度，自适应*/
+	.index-article-comment{
+		width: calc(100% - 600px);
+		margin-left: 600px;
+	}
+	.index-article-preview{
+		width: 600px;
+	}
+	.index-wrap{
+		margin: 0 10px;
+	}
+}
+@media only screen and (max-width: 992px){
+	.index-article-comment{
+		width: calc(100% - 500px);
+		margin-left: 500px;
+	}
+	.index-article-preview{
+		width: 500px;
+	}	
+}
+@media only screen and (max-width: 767px) {
+	.publish-content{
+		width: 100% !important;
+		margin:0 20px;
+	}
+	/*注册登录 开始*/
+	.register-main,
+	.login-main{
+		width: auto;
+		margin:20px 20px;
+		box-sizing: border-box;
+	}
+	.register-banner,
+	.login-banner{
+		height: 8px;
+	}
+	.logo{
+		position: absolute;
+		/*margin-top:20px ;*/
+	}
+	/*注册登录页面 结束*/
+	/*个人信息页面 开始*/
+	.areas{
+		width: 100%;;
+	}
+	.personal-head{
+		display: block;
+		float: none;
+		margin: 30px auto;
+	}
+	.setting-userinfo{
+		display: block;
+		float: none;
+		margin: 50px auto;
+		text-align: center;
+	}
+	.setting-userinfo form{
+		width: auto;
+		text-align: center;
+	}
+	/*个人信息页面 结束*/
+	/*导航条*/
+	/*.header-nav-xs{
+		display: block;
+	}*/
+	/*导航条*/
+	/*主页 开始 */
+	.index-main{
+		width: auto;
+		margin-top:0px;
+	}
+	.index-wrap{
+		margin: 0;
+	}
+	.index-article-preview{
+		/*position: none;*/
+		width: 100%;
+		/*border: 1px solid red;*/
+	}
+	.perview-right,
+	.article-preview-title,
+	.article-preview-content{
+		width: calc(100% - 90px);
+	}
+	.article-preview-title,
+	.article-preview-content{
+		width:auto;
+	}
+	/*评论区域 小屏幕隐藏*/
+	.index-article-comment{
+		display: none;
+	}
+	/*主页 结束*/
+	.li-control-position-middle{
+		top: 70% !important;
+	}
+	.index-article-preview iframe,
+	.index-article-preview embed{
+		width: 100% !important;
+	}
+	
+	.page-header{
+		margin-left: 0px !important;
+	}
+	.setting-content{
+		margin-left: 0px;
+	}
+}

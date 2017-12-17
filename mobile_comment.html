@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>友声</title>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css">	
+		<link rel="stylesheet" href="css/base.css" />		
+		<link rel="stylesheet" href="css/master.css" />
+		<link rel="stylesheet" href="css/mobile_comment.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"/>	
+		<meta name="full-screen" content="yes">
+		<meta name="x5-fullscreen" content="true">		
+		<style>
+			.index-article-preview iframe,
+			.index-article-preview embed{
+				width: 100% !important;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="backIndex"><i class="iconfont icon-arrowleft"></i>返回上页</div>
+			<h2>友声</h2>
+		</header>
+		<main>
+			<div class="index-article-preview">
+				<!--由js加载内容-->
+				<div class="lists">
+				</div>
+			</div>
+			<div class="index-article-comment">
+				<h3></h3>
+			    <form class="bs-example bs-example-form comment-form" role="form">
+	                <div class="input-group">
+	                    <input type="text" class="form-control" id="comment-input" maxlength= "140" placeholder="请选择帖子回复" disabled>
+	                    <span class="input-group-btn">
+	                        <button class="btn btn-default js-send-comment-bt" type="button">发送</button>
+	                    </span>
+	                </div><!-- /input-group -->
+			    </form>
+			    
+			    <hr class="dividing-big"/>
+			    <div class="index-article-comment-area">
+			    	<div class="comment-item">  		
+			    		<img src="img/touxiang.jpg" alt="" class="comment-avatar"/>				    		
+			    		<div class="comment-details">
+			    			<div class="comment-details-head">
+			    				<div class="comment-username">围墙</div>
+			    				<div class="comment-time">4分钟前</div>
+			    				<div class="comment-floor">1F</div>
+			    			</div>
+			    			<div class="comment-content">好呀。哈哈哈</div>
+			    			<div class="comment-like" data-comment-id="100" data-clicked="no"><i class="iconfont icon-dianzan-copy"></i>支持	<em class="comment-like-num">(1)</em></div>
+			    		</div>
+			    	</div>
+			    	<div class="comment-item">  		
+			    		<img src="img/touxiang.jpg" alt="" class="comment-avatar"/>				    		
+			    		<div class="comment-details">
+			    			<div class="comment-details-head">
+			    				<div class="comment-username">杜拉拉升职记</div>
+			    				<div class="comment-time">30分钟前</div>
+			    				<div class="comment-floor">2F</div>
+			    			</div>
+			    			<div class="comment-content">厉害了，我的大苏宁</div>
+			    			<div class="comment-like"><i class="iconfont icon-dianzan-copy"></i> 支持</div>
+			    		</div>
+			    	</div>
+			    </div>
+			</div>
+		</main>
+		<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<script src="js/base.js"></script>	
+		<script src="js/master.js"></script>
+		<script src="js/comment-mobile.js"></script>
+		
+		<script type="text/javascript">
+			$(".backIndex").on("click",function() {
+				window.history.go(-1);  
+			})
+		</script>		
+	</body>
+</html>
